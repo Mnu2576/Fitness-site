@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    body {
+        background: black;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: black;
+        background: red;
+    }
+
+
+    .section {
+        margin-bottom: 5rem;
+    }
+
+    #contact {
+        background: url('./img/bg_cover.jpg') no-repeat 0 0;
+        background-size: cover;
+    }
+
+    .section h2.section-header {
+        text-align: center;
+    }
+
+    .section h2.section-header:after {
+        background: red;
+        content: "";
+        display: block;
+        width: 100px;
+        height: 2px;
+        margin: 1rem auto;
+    }
+
+    .form-group {
+        color: white;
+        font-weight: bolder;
+        font-size: 20px;
+    }
+
+    .form-group input {
+        background: rgb(194, 191, 191);
+    }
+
+    .information {
+        background: rgb(59, 59, 59);
+        height: 300px;
+        padding-left: 12px;
+
+    }
+
+    #important-link {
+        background: rgb(73, 73, 73);
+    }
+
+    #login a:hover {
+        background: none;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-sm navbar-dark" style="background: black;">
+                    <div class="nav-name text-white">
+                        <img src="" alt="">
+                        FITNESS FREAK
+                    </div>
+
+                    <button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mynavbar">
+
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+                            <li class="nav-item"><a href="register.html" class="nav-link">Sign up/login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container section">
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <h2 class=" section-header font-weight-bold text-white text-center">REGISTER</h2>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-5">
+                        <label for="name">NAME</label>
+                        <input type="text" id="name" name="name"  onchange={handlechange}
+                            class="form-control" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="number">PHONE NUMBER</label>
+                        <input type="number" id="number" onchange={handlechange}
+                            class="form-control" placeholder="Enter your number">
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="gender">Gender</label>
+                        <div class="form-check form-check-inline">
+                            <div class="custom-control custom-radio ml-3">
+                                <input type="radio" name="gender" class="custom-control-input" id="malebox">
+                                <label for="malebox" class="custom-control-label">Male</label>
+                            </div>
+                            <div class="custom-control custom-radio ml-3">
+                                <input type="radio" name="gender" class="custom-control-input" id="femalebox">
+                                <label for="femalebox" class="custom-control-label">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="email">YOUR EMAIL</label>
+                        <input type="text" id="email" name="email"  onchange={handlechange}
+                            class="form-control" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="password">PASSWORD</label>
+                        <input type="text" id="password" name="passwrod"  onchange={handlechange}
+                            class="form-control" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="confirmpassword">Confirm PASSWORD</label>
+                        <input type="text" id="confirmpassword" name="cpassword" 
+                            onchange={handlechange} class="form-control" placeholder="Enter your email">
+                    </div>
+                    <div>
+                        <button class="btn btn-danger mb-3">Sign Up</button>
+                    </div>
+                    <div class=" mb-5" id="login">
+                        <a href="login.html" class="text-danger font-weight-bold"
+                            style="text-decoration:underline; font-size: 20px;">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="important-link">
+        <div class="container section">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-white mt-2">FITNESS FREAK</h3>
+                    <p class="text-white mt-4">Equipments With Steam, Cafe, Zumba, Dance, Yoga, <br>
+                        Strength, Cardio And Many More <br>
+                        <i class="fa fa-phone"></i>+91 XXXXXXXXXX <br>
+                        <i></i>fitnessfreaks@gmail.com
+                    </p>
+
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-white mt-2 mb-4">IMPORTANT LINKS</h3>
+                    <ul style="text-decoration: none;">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                        <li><a href="register.html" class="text-white">Registor</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12  text-white">
+                    Designed And Developed by garvit
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        import usestate from "react";
+
+
+        const [data, setData] = usestate({
+            name: '',
+            number: '',
+            email: "",
+            password: ''
+        })
+
+        const handlechange = (e) => {
+            e.preventDefault();
+            const name = e.target;
+            const id = e.target;
+            const value = document.getElementById("id").value;
+            setData(prev => ({ ...prev, [name]: value }));
+            console.log(data);
+        }
+    </script>
+</body>
+
+</html>
